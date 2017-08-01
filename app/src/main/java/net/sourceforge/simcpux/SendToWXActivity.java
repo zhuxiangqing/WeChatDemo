@@ -325,6 +325,9 @@ public class SendToWXActivity extends Activity {
 			}
 		});
 
+		/*
+		发送网页
+		 */
 		findViewById(R.id.send_webpage).setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -363,6 +366,9 @@ public class SendToWXActivity extends Activity {
 			}
 		});
 
+		/*
+		发送小程序
+		 */
 		findViewById(R.id.send_appbrand).setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -469,7 +475,10 @@ public class SendToWXActivity extends Activity {
 				});
 			}
 		});
-		
+
+		/*
+		发送Emoji表情
+		 */
 		findViewById(R.id.send_emoji).setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -599,16 +608,19 @@ public class SendToWXActivity extends Activity {
 		boolean checked = ((RadioButton) view).isChecked();
 
 		switch (view.getId()) {
+			//
 		case R.id.target_scene_session:
 			if (checked) {
 				mTargetScene = SendMessageToWX.Req.WXSceneSession;
 			}
 			break;
+			//朋友圈
 		case R.id.target_scene_timeline:
 			if (checked) {
 				mTargetScene = SendMessageToWX.Req.WXSceneTimeline;
 			}
 			break;
+			//收藏
 		case R.id.target_scene_favorite:
 			if (checked) {
 				mTargetScene = SendMessageToWX.Req.WXSceneFavorite;
